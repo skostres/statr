@@ -1,0 +1,34 @@
+Sidebar:
+	HOME
+	EXTERNAL RESOURCES
+	GETTING STARTED WTIH R
+	CLASS SCHEDULE
+	PROJECTS
+
+
+HOME:
+	Class Description
+	Course Syllabus
+
+EXTERNAL RESOURCES:
+
+	R-link: https://cran.rstudio.com/
+	R-studio: https://www.rstudio.com/
+
+GETTING STARTED WITH R:
+	
+	Installing R and R-studio
+	Why use R?
+	What is R-studio (what is an IDE)?
+
+SCHEDULE:
+
+	Table containing topics to be covered.
+	Table format: Date / Lecture Content Covered / Assigned HW & Projects
+
+PROJECTS:
+
+	Contains link to project page/description for each project
+	
+
+	
