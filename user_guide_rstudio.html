@@ -136,7 +136,49 @@
 <li>If at any time you are wondering how to use a function, go to the console window and type ? followed by the name of the function. Example: ?View
 <img src="img/rstudio-view.jpg" style="border: 1px; border-style: solid;" width="700" /></li>
                     </ul>
+
+                    <li>Let’s create a new r block/chunk to answer the first question
+                        <div style="border:1px;">
+                            ```{r problem_1}<br />
+                            # Your code should go here.<br />
+                            ```
+                        </div>
+                        <ul>
+                            <li>
+                                To get the sample, we will employ a function called rnorm and pass three arguments. N=1000 (The sample size), m=10 (Mean of 10), and sd=2.25 (Standard deviation of 2.25). We would also like to assign this to the variable data_1000. One way to do this is:
+                                  <div style="border:1px;">
+                                  sample_1000 &#60;&#45; rnorm(n=1000, m=10, sd=2.25)
+                                  </div>  
+                            </li>
+                            <li>Next we would like to represent the sample in a histogram. To do this we will use the hist function. Use arguments x=sample_1000 (The data to be tallied), xlab=”Sample Values” (The x-axis labels), breaks=10 (Asks R to try to have 10 bins)
+Note: R may not create exactly 10 bins based on its algorithm. To gain precision you may provide exact breaks by using breaks= seq(0,20,by=2). This is what we did:
+<div style="border:1px;">
+    hist(x=sample_1000, xlab="Sample Values",breaks=seq(0,20,by=2))
+</div>
+Our plot looked like this (Yours may differ slightly):
+<img src="img/rstudio-plot.jpg" style="border: 1px; border-style: solid;" width="400" /></li>
+</li>
+<li>At this point, we recommend playing with different parameters to obtain colors, different titles and more. Hint: use ?hist to learn the parameters and/or google
+    <ul>
+        <li>As you may have guessed, the function to create a boxplot is boxplot. Try to figure out the parameters.</li>
+        <li>ii.	To create the normal probability plot use qqnorm. To get a reference line through the data you will need to add qqline(sample_1000, col=2) right after the qqnorm call:
+<div style="border:1px;">
+boxplot(x=sample_1000)<br />
+qqnorm(sample_1000); qqline(sample_1000, col=2)
+</div>
+Note: col=2 represents the color red, col=3 is green for the reference line.
+        </li>
+    </ul>
+
+    <li>That is it! Make sure to save your file first, then output/generate your pdf/word/html using the Knit button.</li>
+
+</li>
+
+                        </ul>
+                    </li>
+
             </ul>
+            
             </div>
             <!-- /.row -->
         </div>
