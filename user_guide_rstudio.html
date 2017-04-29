@@ -115,18 +115,18 @@
 
                 <p>
                     For the first problem, we would like to generate a sample of a 1000 from the normal distribution with a mean of µ=10 and a standard deviation of σ=2.25. 
-                    <ul>
+                    <ul style="list-style-type: decimal;">
                         <li>Next, we would like to build a histogram using the sample with 10 bins (or classes). Recall that each bin represents an interval and we are tallying the number of observations belonging to the period.</li>
                         <li>Last, we would like to represent the data in a normal probability plot and boxplot.</li>
                     </ul>
                 </p>
 
                 <h3>Instructions</h3>
-                <ul>
+                <ul style="list-style-type: decimal;">
                 <li>Fire up (open) RStudio</li>
                 <li>Create a new R markdown file by “File > New File > R Markdown”</li>
-                    <ul>
-                        <li>a.	Fill in the title as Project 1 and select the desired output file.</li>
+                    <ul style="list-style-type: lower-alpha;">
+                        <li>Fill in the title as Project 1 and select the desired output file.</li>
                         <li>Note: If you want to use PDF, you will need to install TeX.</li>
                         <li>R Markdown files allow blocks (chunks) of code to exist within text.</li>
                         <li>Example:<br />
@@ -138,31 +138,31 @@
                     </ul>
 
                     <li>Let’s create a new r block/chunk to answer the first question
-                        <div style="border:1px;">
+                        <div style="border: 1px; border-style: solid;">
                             ```{r problem_1}<br />
                             # Your code should go here.<br />
                             ```
                         </div>
-                        <ul>
+                        <ul style="list-style-type: lower-alpha;">
                             <li>
                                 To get the sample, we will employ a function called rnorm and pass three arguments. N=1000 (The sample size), m=10 (Mean of 10), and sd=2.25 (Standard deviation of 2.25). We would also like to assign this to the variable data_1000. One way to do this is:
-                                  <div style="border:1px;">
+                                  <div style="border: 1px; border-style: solid;">
                                   sample_1000 &#60;&#45; rnorm(n=1000, m=10, sd=2.25)
                                   </div>  
                             </li>
                             <li>Next we would like to represent the sample in a histogram. To do this we will use the hist function. Use arguments x=sample_1000 (The data to be tallied), xlab=”Sample Values” (The x-axis labels), breaks=10 (Asks R to try to have 10 bins)
 Note: R may not create exactly 10 bins based on its algorithm. To gain precision you may provide exact breaks by using breaks= seq(0,20,by=2). This is what we did:
-<div style="border:1px;">
+<div style="border: 1px; border-style: solid;">
     hist(x=sample_1000, xlab="Sample Values",breaks=seq(0,20,by=2))
 </div>
 Our plot looked like this (Yours may differ slightly):
 <img src="img/rstudio-plot.jpg" style="border: 1px; border-style: solid;" width="400" /></li>
 </li>
 <li>At this point, we recommend playing with different parameters to obtain colors, different titles and more. Hint: use ?hist to learn the parameters and/or google
-    <ul>
+    <ul style="list-style-type: lower-alpha;">
         <li>As you may have guessed, the function to create a boxplot is boxplot. Try to figure out the parameters.</li>
         <li>ii.	To create the normal probability plot use qqnorm. To get a reference line through the data you will need to add qqline(sample_1000, col=2) right after the qqnorm call:
-<div style="border:1px;">
+<div style="border: 1px; border-style: solid;">
 boxplot(x=sample_1000)<br />
 qqnorm(sample_1000); qqline(sample_1000, col=2)
 </div>
